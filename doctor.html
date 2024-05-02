@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+</head>
+
+<body>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=0.8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+	<div class='modal-container' id='login_modal' style='display:none;'>
+		<div class='modal' style='width:70%;'>
+			<h1>Login</h1>
+			<form>
+				<div>
+					<div>Email</div>
+					<input type='text' id='emailtxt' placeholder='Email' style='width:70%'/>
+				</div>
+				<div>
+					<div>Password</div>
+					<input type='password' id='pwdtxt' placeholder='Password' style='width:70%'/>
+				</div>
+				<div>
+					<button type='button' onclick='loginMe()'>Login</button>
+					<button type='button' onclick='closeLoginModal()'>Close</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class='headdiv'>
+		<h1>Hospital</h1>
+		<div>
+			<a><i class='fa-solid fa-home'></i>Home</a>
+			<a><i class='fa-solid fa-note'></i>Policy</a>
+			<a onclick='openLoginModal()'><i class='fa-solid fa-user'></i>Login</a>
+		</div>
+	</div>
+
+	<div class='body-container' id='regform'>
+		<div class='card'>
+
+			<h2>Patient</h2>
+			<table>
+				<thead>
+					<tr>
+						<th style='width:60%;'>Full name</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody id='patient_list'>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class='card' id='patientLog' style='display:none;'>
+			<h2 id='patName'>Patient - Abdullah Aideed Bin Zailan</h2>
+			<form>
+				<div>
+					<label>Symptom</label>
+					<br/>
+					<textarea placeholder='Tell us more about this patient'></textarea>
+				</div>
+
+				<div>
+					<button type='button'>Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<footer>
+		<h2>Need more help? Contact us</h2>
+		<p>Aideed</p>
+		<p>Iza</p>
+		<p>Syafiqah</p>
+		<p>Suha</p>
+	</footer>
+
+</body>
+
+<script src='script.js'></script>
+<script>
+	loadPage('doctor');
+</script>
+
+</html>

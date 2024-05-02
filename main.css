@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@400;500&display=swap');
+
+*{
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+background-color: #dfdfdf;
+margin:0px;
+padding:0px;
+overflow-x: hidden;
+scrollbar-width:none;
+}
+
+.modal-container{
+top:0px;
+left:0px;
+position: fixed;
+width:100%;
+height:100%;
+justify-content: center;
+display:flex;
+z-index: 100;
+background-color: rgba(0,0,0,0.5);
+padding:20px;
+}
+
+.modal{
+height:fit-content;
+background-color: white;
+padding:20px;
+border-radius:10px;
+animation: fadeIn 0.5s;
+}
+
+.modal form div{
+width:100%;
+justify-content: center;
+margin-top:20px;
+}
+
+.modal form div div{
+width:100px;
+}
+
+.headdiv{
+width:100%;
+padding:10px;
+background-color: #00cc99;
+text-align:center;
+color: white;
+}
+
+.headdiv div{
+display:flex;
+width:100%;
+justify-content: center;
+}
+
+.headdiv a{
+margin-left:20px;
+font-size: 15px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.headdiv a:hover{
+font-size: 18px;
+}
+
+.body-container{
+margin-top:10px;
+}
+
+.card{
+margin-top:20px;
+width:100%;
+background-color:white;
+padding:30px;
+animation: fadeIn 0.5s;
+}
+
+input{
+width:30%;
+color: black;
+padding:10px;
+border-radius: 10px;
+background-color: #dfdfdf;
+border: 0px;
+transition: 0.5s;
+}
+
+select{
+width:30%;
+color: black;
+padding:10px;
+border-radius: 10px;
+background-color: #dfdfdf;
+border: 0px;
+transition: 0.5s;
+}
+
+textarea{
+width:60%;
+height:200px;
+color: black;
+padding:10px;
+border-radius: 10px;
+background-color: #dfdfdf;
+border: 0px;
+resize: none;
+transition: 0.5s;
+}
+
+
+input:focus{
+background-color: white;
+}
+
+select:focus{
+background-color: white;
+}
+
+input:disabled{
+background-color: black;
+color:white;
+}
+
+button{
+background-color: #00cc99;
+width:30%;
+text-align:center;
+border:0px;
+padding:10px;
+color: black;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover{
+background-color: #202020;
+color:white;
+}
+
+.card form div{
+	margin-top:30px;
+	display: block;
+}
+
+footer{
+padding:10px;
+background-color: #00cc99;
+}
+
+table{
+margin-top:30px;
+width:90%;
+}
+
+tr{
+text-align:center;
+}
+
+tr th{
+padding:5px;
+background-color: #00cc99;
+border-top-left-radius: 10px;
+}
+
+tr th{
+padding:5px;
+background-color: #00cc99;
+border-top-right-radius: 10px;
+}
+
+tr td{
+padding:5px;
+background-color: #dfdfdf;
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}

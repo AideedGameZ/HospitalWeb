@@ -1,0 +1,166 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+</head>
+
+<body>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=0.8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<div class='modal-container' id='login_modal' style='display:none;'>
+		<div class='modal' style='width:70%;'>
+			<h1>Login</h1>
+			<form>
+				<div>
+					<div>Email</div>
+					<input type='text' id='emailtxt' placeholder='Email' style='width:70%'/>
+				</div>
+				<div>
+					<div>Password</div>
+					<input type='password' id='pwdtxt' placeholder='Password' style='width:70%'/>
+				</div>
+				<div>
+					<button type='button' onclick='loginMe()'>Login</button>
+					<button type='button' onclick='closeLoginModal()'>Close</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class='headdiv'>
+		<h1>Hospital</h1>
+		<div>
+			<a><i class='fa-solid fa-home'></i>Home</a>
+			<a><i class='fa-solid fa-note'></i>Policy</a>
+			<a onclick='openLoginModal()'><i class='fa-solid fa-user'></i>Login</a>
+		</div>
+	</div>
+
+	<div class='body-container' id='regform'>
+		<div class='card'>
+			<h2>Appointment Quote List</h2>
+			
+			<table>
+				<thead>
+					<tr>
+					<th>Fullname</th>
+					<th>Action</th>
+					</tr>
+				</thead>
+				<tbody id='patientreq_list'>
+				</tbody>
+			</table>
+		</div>
+
+		<div class='card'>
+			<h2>Patient</h2>
+
+			<table>
+				<thead>
+					<tr>
+					<th>Fullname</th>
+					<th>Status</th>
+					<th>Action</th>
+					</tr>
+				</thead>
+				<tbody id='patient_list'>
+				</tbody>
+			</table>
+		</div>
+
+		<div class='card' id='patientLog' style='display:none;'>
+			<h2 id='patName'>Patient Info - Ahmad Syafiq Bin Sahril</h2>
+
+			<form>
+				<div>
+					<label>Fullname</label>
+					<br/>
+					<input type='text' value='Ahmad Syafiq Bin Sahril' disabled/>
+				</div>
+
+				<div>
+					<label>IC</label>
+					<br/>
+					<input type='text' value='031702785759' disabled/>
+				</div>
+
+				<div>
+					<label>Gender</label>
+					<br/>
+					<input type='text' value='Male' disabled/>
+				</div>
+
+				<div>
+					<label>Email</label>
+					<br/>
+					<input type='text' value='syafiq333@gmail.com' disabled/>
+				</div>
+			</form>
+		</div>
+
+		<div id='discharge_container' class='card' style='display:none;'>
+			<h2>Manage Discharge</h2>
+
+				<form>
+					<div>
+						<label>Fullname</label>
+						<br/>
+						<input type='text' value='no name' id='dischargeName' disabled/>
+					</div>
+
+					<div>
+						<label>Medicine</label>
+						<br/>
+						<select id='medtxt'>
+							<option>Select Status</option>
+							<option value='Paracetamol(RM30)'>Paracetamol(RM30)</option>
+							<option value='Pristine(RM30)'>Pristine(RM30)</option>
+							<option value='Benzene(RM50)'>Benzene Pills(RM50)</option>
+							<option value='Sell Sun Blue(RM20)'>Sell Sun Blue(RM20)</option>
+							<option value='Glucose(RM10)'>Glucose(RM10)</option>
+						</select>
+						<button type='button' onclick='suggestMedicine()'>Add</button>
+					</div>
+				</form>
+
+				<table style='width:30%;'>
+					<thead>
+						<tr>
+							<th>Medicine</th>
+						</tr>
+					</thead>
+					<tbody id='medicine_list'>
+					</tbody>
+				</table>
+
+				<div style='text-align:end; width:90%; margin-top:100px;'>
+					<div>
+					<label id='totalpricetxt'>Total Price : RM0</label>
+					<button>Confirm Discharge</button>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<footer>
+		<h2>Need more help? Contact us</h2>
+		<p>Aideed</p>
+		<p>Iza</p>
+		<p>Syafiqah</p>
+		<p>Suha</p>
+	</footer>
+
+</body>
+
+<script src='script.js'></script>
+<script>
+	loadPage('staff');
+</script>
+
+
+</html>
