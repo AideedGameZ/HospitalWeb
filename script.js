@@ -8,6 +8,17 @@ function closeLoginModal(){
 	modal.style.display = 'none';
 }
 
+function loginMe(){
+	let emailtxt = document.getElementById('emailtxt');
+	let pwdtxt = document.getElementById('pwdtxt');
+
+	if(emailtxt.value === 'doctor'){
+		window.location.href = 'doctor.html';
+	}else if(emailtxt.value === 'staff'){
+		window.location.href = 'staff.html';
+	}
+}
+
 //Doctor Page____________________________________________________________
 let patient_num = 0;
 
